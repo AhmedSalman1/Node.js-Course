@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Courses App</title>
+		<link
+			rel="stylesheet"
+			href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="p-4 text-center mb-5 bg-dark text-light">Books App</header>
+		<section class="container mt-4 mb-5 book-form">
+			<form action="" id="add-book">
+				<div class="form-group my-2">
+					<label for="title">Book Name</label>
+					<input
+						type="text"
+						id="name"
+						class="form-control"
+						placeholder="Book Name" />
+				</div>
+				<div class="form-group my-2">
+					<label for="price">Book Price</label>
+					<input
+						type="number"
+						class="form-control"
+						placeholder="Book Price"
+						id="price"
+						value="0" />
+				</div>
+				<div class="form-group my-2">
+					<label for="author">Book Author</label>
+					<input
+						type="text"
+						class="form-control"
+						id="author"
+						placeholder="Book Author" />
+				</div>
+				<div class="form-group my-2">
+					<label for="description">Book Description</label>
+					<textarea
+						id="description"
+						class="form-control"
+						style="height: 20vh"></textarea>
+				</div>
+				<input type="submit" value="Add Book" class="mt-2 btn btn-dark" />
+			</form>
+		</section>
+
+		<!-- Courses List -->
+		<section class="books-list mt-4 mb-5 text-center">
+			<div class="container">
+				<table class="table table-bordered table-hovered table-striped">
+					<thead>
+						<tr>
+							<th>Book Name</th>
+							<th>Book Price</th>
+							<th>Book Author</th>
+							<th>Book Description</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</section>
+		<script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
+		<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
