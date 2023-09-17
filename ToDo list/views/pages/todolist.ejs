@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../partials/head.ejs') %>
+	</head>
+	<body>
+		<%- include('../partials/navbar.ejs') %>
+		<center><h2>To-Do List</h2></center>
+
+		<div class="container w-50 mx-auto text-center shadow bg-light p-5">
+			<ul>
+				<% for (let i = 0; i < tasks.length; i++) { %>
+				<li><%= tasks[i] %></li>
+				<% } %>
+			</ul>
+
+			<form action="/add" method="post">
+				<input type="text" name="task" placeholder="Add a new task" required />
+				<button type="submit">Add</button>
+			</form>
+		</div>
+
+		<%- include('../partials/footer.ejs') %>
+	</body>
+</html>
